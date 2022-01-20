@@ -13,6 +13,10 @@ export class StudentService {
   constructor(private http:HttpClient) { }
 
 
+  getStudents():Observable<Student[]>{
+    return this.http.get<Student[]>(API_URL);
+  }
+
   addStudent(student:Student):Observable<Student>{
     return this.http.post<Student>(API_URL,student);
   }

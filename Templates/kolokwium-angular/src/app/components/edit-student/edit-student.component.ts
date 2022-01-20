@@ -26,5 +26,6 @@ export class EditStudentComponent implements OnInit {
       data=>{console.log(data)}
     )
     alert("Student edited!");
+    this.studentService.getStudents();
   }
 }
