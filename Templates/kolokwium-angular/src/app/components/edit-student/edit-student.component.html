@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <h2>Edytuj studenta</h2>
+    <form>
+        <label>Podaj id</label>
+        <input type="number" formControlName="id" #idForm>
+        <label>Podaj imię</label>
+        <input type="text" formControlName="firstName" #firstNameForm>
+        <label>Podaj nazwisko</label>
+        <input type="text" formControlName="lastName" #lastNameForm>
+        <label>Podaj wiek</label>
+        <input type="number" formControlName="age" #ageForm>
+        <button (click)="editStudent(idForm.value,firstNameForm.value,lastNameForm.value,ageForm.value)">Edit
+            student</button>
+    </form>
+</div>
